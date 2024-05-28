@@ -19,7 +19,7 @@ public class BlogStoreRepositoryCustomImpl implements BlogStoreRepositoryCustom 
     @PersistenceContext
     private EntityManager em;
 
-    private static final String FROM_REQUEST = " from rental_home.blog_store bs ";
+    private static final String FROM_REQUEST = " from railway.blog_store bs ";
     @Override
     public Page<BlogStore> getPageOfBlogStore(Long userId, Pageable pageable) {
         StringBuilder strQuery = new StringBuilder();

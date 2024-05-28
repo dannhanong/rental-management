@@ -21,8 +21,8 @@ public class ContractRepositoryCustomImpl implements ContractRepositoryCustom {
     @PersistenceContext
     private EntityManager em;
 
-    private static final String FROM_CONTRACT = " from rental_home.contract c ";
-    private static final String INNER_JOIN_ROOM = " inner join rental_home.room r on c.room_id  = r.id ";
+    private static final String FROM_CONTRACT = " from railway.contract c ";
+    private static final String INNER_JOIN_ROOM = " inner join railway.room r on c.room_id  = r.id ";
 
     @Override
     public Page<Contract> searchingContact(String name,String phone, Long userId, Pageable pageable) {

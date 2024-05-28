@@ -22,9 +22,9 @@ public class MaintenanceRepositoryCustomImpl implements MaintenanceRepositoryCus
     @PersistenceContext
     private EntityManager em;
 
-    private static final String FROM_MAINTENANCE = " from rental_home.maintenance m  ";
+    private static final String FROM_MAINTENANCE = " from railway.maintenance m  ";
 
-    private static final String INNER_JOIN_ROOM = " inner join rental_home.room r on m.room_id = r.id ";
+    private static final String INNER_JOIN_ROOM = " inner join railway.room r on m.room_id = r.id ";
 
 
     @Override

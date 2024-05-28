@@ -23,7 +23,7 @@ public class UserRepositoryCustomImpl implements UserRepositoryCustom {
     @PersistenceContext
     private EntityManager em;
 
-    private static final String FROM_USER = "from rental_home.users u ";
+    private static final String FROM_USER = "from railway.users u ";
     @Override
     public Page<User> searchingAccount(String keyword, Pageable pageable) {
         StringBuilder strQuery = new StringBuilder();

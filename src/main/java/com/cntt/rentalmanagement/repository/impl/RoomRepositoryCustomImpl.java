@@ -23,7 +23,7 @@ public class RoomRepositoryCustomImpl implements RoomRepositoryCustom {
     @Override
     public Page<Room> searchingRoom(String title, Long userId, Pageable pageable) {
         StringBuilder strQuery = new StringBuilder();
-        strQuery.append(" from rental_home.room r ");
+        strQuery.append(" from railway.room r ");
         strQuery.append(" where 1=1");
         Map<String, Object> params = new HashMap<>();
         if (Objects.nonNull(title) && !title.isEmpty()) {
@@ -45,7 +45,7 @@ public class RoomRepositoryCustomImpl implements RoomRepositoryCustom {
     @Override
     public Page<Room> searchingRoomForAdmin(String title,Boolean approve, Pageable pageable) {
         StringBuilder strQuery = new StringBuilder();
-        strQuery.append(" from rental_home.room r ");
+        strQuery.append(" from railway.room r ");
         strQuery.append(" where 1=1");
         Map<String, Object> params = new HashMap<>();
         if (Objects.nonNull(title) && !title.isEmpty()) {
@@ -67,7 +67,7 @@ public class RoomRepositoryCustomImpl implements RoomRepositoryCustom {
     @Override
     public Page<Room> searchingRoomForCustomer(String title, BigDecimal price,Long categoryId,Long userId, Pageable pageable) {
         StringBuilder strQuery = new StringBuilder();
-        strQuery.append(" from rental_home.room r where 1=1 ");
+        strQuery.append(" from railway.room r where 1=1 ");
         Map<String, Object> params = new HashMap<>();
         if (Objects.nonNull(title) && !title.isEmpty()) {
             strQuery.append(" AND r.title LIKE :title");
@@ -106,7 +106,7 @@ public class RoomRepositoryCustomImpl implements RoomRepositoryCustom {
     @Override
     public Page<Room> getAllRentOfHome(Long userId, Pageable pageable) {
         StringBuilder strQuery = new StringBuilder();
-        strQuery.append(" from rental_home.room r ");
+        strQuery.append(" from railway.room r ");
         strQuery.append(" where 1=1");
         strQuery.append(" AND r.status IN ('CHECKED_OUT','ROOM_RENT')");
         strQuery.append(" AND r.is_locked = 'ENABLE'");

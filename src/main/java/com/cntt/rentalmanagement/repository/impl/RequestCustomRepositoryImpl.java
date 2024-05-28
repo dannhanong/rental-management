@@ -19,8 +19,8 @@ public class RequestCustomRepositoryImpl implements RequestCustomRepository {
     @PersistenceContext
     private EntityManager em;
 
-    private static final String FROM_REQUEST = " from rental_home.request r ";
-    private static final String INNER_JOIN_ROOM = " inner join rental_home.room ro on r.room_id  = ro.id ";
+    private static final String FROM_REQUEST = " from railway.request r ";
+    private static final String INNER_JOIN_ROOM = " inner join railway.room ro on r.room_id  = ro.id ";
 
     @Override
     public Page<Request> searchingOfRequest(String keyword,Long userId, Pageable pageable) {

@@ -20,7 +20,7 @@ public class FollowRepositoryCustomImpl implements FollowRepositoryCustom {
     @PersistenceContext
     private EntityManager em;
 
-    private static final String FROM_REQUEST = " from rental_home.follow f ";
+    private static final String FROM_REQUEST = " from railway.follow f ";
     @Override
     public Page<Follow> getPageFollow(Long userId,Pageable pageable) {
 
